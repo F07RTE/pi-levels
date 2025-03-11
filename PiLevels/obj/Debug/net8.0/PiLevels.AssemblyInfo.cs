@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PiLevels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dffc9cc55d84d29ea503607bc8853c296c8235ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f05b8a301f82405fe877918b321dbdda2430493")]
 [assembly: System.Reflection.AssemblyProductAttribute("PiLevels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PiLevels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
