@@ -1,0 +1,90 @@
+{
+  "id": 1,
+  "name": "English",
+  "levels": [
+    {
+      "id": 1,
+      "name": "Beginner",
+      "studyPlan": "Focus on basic vocabulary and simple phrases",
+      "levelNumber": 1,
+      "resources": [
+        {
+          "id": 1,
+          "name": "Basic English Course",
+          "description": "Introduction to English language basics",
+          "link": "https://example.com/basic-english"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Elementary",
+      "studyPlan": "Learn common expressions and basic grammar",
+      "levelNumber": 2,
+      "resources": [
+        {
+          "id": 2,
+          "name": "Elementary English Guide",
+          "description": "Guide for elementary English learners",
+          "link": "https://example.com/elementary-english"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Intermediate",
+      "studyPlan": "Practice conversation and advanced grammar",
+      "levelNumber": 3,
+      "resources": [
+        {
+          "id": 3,
+          "name": "Intermediate English Practice",
+          "description": "Intermediate level exercises and materials",
+          "link": "https://example.com/intermediate-english"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Upper Intermediate",
+      "studyPlan": "Focus on fluency and complex topics",
+      "levelNumber": 4,
+      "resources": [
+        {
+          "id": 4,
+          "name": "Advanced English Topics",
+          "description": "Upper intermediate English materials",
+          "link": "https://example.com/upper-intermediate"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Advanced",
+      "studyPlan": "Master advanced concepts and idioms",
+      "levelNumber": 5,
+      "resources": [
+        {
+          "id": 5,
+          "name": "Advanced English Materials",
+          "description": "Advanced level English resources",
+          "link": "https://example.com/advanced-english"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Proficient",
+      "studyPlan": "Achieve native-like proficiency",
+      "levelNumber": 6,
+      "resources": [
+        {
+          "id": 6,
+          "name": "English Mastery",
+          "description": "Professional level English content",
+          "link": "https://example.com/proficient-english"
+        }
+      ]
+    }
+  ]
+}

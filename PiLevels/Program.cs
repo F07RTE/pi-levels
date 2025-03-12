@@ -1,4 +1,5 @@
 using PiLevels.Components;
+using PiLevels.Services.Skill;
 using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddMudServices();
 builder.Services.AddTeamsFx(builder.Configuration.GetSection("TeamsFx"));
+builder.Services.AddScoped<SkillService>();
 
 var app = builder.Build();
 
