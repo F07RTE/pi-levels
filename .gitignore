@@ -39,3 +39,6 @@ bld/
 **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
 !**/[Pp]ackages/build/
+
+# Teams package
+teams-package.zip
