@@ -8,6 +8,7 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 builder.Services.AddMudServices();
+builder.Services.AddTeamsFx(builder.Configuration.GetSection("TeamsFx"));
 
 var app = builder.Build();
 

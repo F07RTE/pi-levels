@@ -1,0 +1,28 @@
+@page "/config"
+@using Microsoft.TeamsFx
+@inject TeamsUserCredential TeamsUserCredential
+@inject IJSRuntime JSRuntime
+
+<MudContainer Class="mt-16">
+    <MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">Pi Levels Configuration</MudText>
+    <MudPaper Class="pa-4">
+        <MudText>Your app is now configured for use in Microsoft Teams!</MudText>
+        <MudButton Color="Color.Primary" Variant="Variant.Filled" Class="mt-4" OnClick="SaveConfiguration">Save Configuration</MudButton>
+    </MudPaper>
+</MudContainer>
+
+@code {
+    private async Task SaveConfiguration()
+    {
+        await JSRuntime.InvokeVoidAsync("microsoftTeams.settings.setValidityState", true);
+        await JSRuntime.InvokeVoidAsync("microsoftTeams.settings.registerOnSaveHandler", async () =>
+        {
+            await JSRuntime.InvokeVoidAsync("microsoftTeams.settings.setSettings", new
+            {
+                contentUrl = "https://{{DOMAIN}}/",
+                entityId = "PiLevelsConfig",
+                suggestedDisplayName = "Pi Levels"
+            });
+        });
+    }
+}
