@@ -1,7 +1,10 @@
+@using SuperTraining.Blazor.Services
+@using Microsoft.AspNetCore.Components
 @inherits LayoutComponentBase
 @inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
 
-<MudThemeProvider />
+<MudThemeProvider  Theme="ThemeService.GetTheme()"/>
 <MudDialogProvider />
 <MudSnackbarProvider />
 
@@ -12,8 +15,8 @@
 </HeadContent>
 
 <MudLayout>
-    <MudAppBar Elevation="1">
-        <MudText Typo="Typo.h6">PI Levels</MudText>
+    <MudAppBar Elevation="2"Color="Color.Primary">
+        <MudImage Src="resources/logo.png" Width="200" Style="cursor: pointer" @onclick="NavigateToHome"></MudImage>
     </MudAppBar>
     <MudMainContent>
         <MudContainer MaxWidth="MaxWidth.Large" Class="my-4">
@@ -23,6 +26,11 @@
 </MudLayout>
 
 @code {
+    private void NavigateToHome()
+    {
+        NavigationManager.NavigateTo("/");
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
