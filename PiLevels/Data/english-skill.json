@@ -2,7 +2,7 @@
   "id": 1,
   "name": "English",
   "icon": "english.png",
-  "description": "English language skill progression",
+  "description": "English language skill progression guide.",
   "subSkills": [],
   "levels": [
     {
