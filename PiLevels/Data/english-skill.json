@@ -4,13 +4,16 @@
   "levels": [
     {
       "id": 1,
-      "name": "Beginner",
-      "studyPlan": "Focus on basic vocabulary and simple phrases",
+      "name": "Initiate",
+      "description": "",
+      "icon": "initiate.png",
+      "studyPlan":"study-guide-for-initiate.pdf",
       "levelNumber": 1,
+      "prize": "Voucher R$50,00",
       "resources": [
         {
           "id": 1,
-          "name": "Basic English Course",
+          "name": "Book",
           "description": "Introduction to English language basics",
           "link": "https://example.com/basic-english"
         }
@@ -18,13 +21,15 @@
     },
     {
       "id": 2,
-      "name": "Elementary",
-      "studyPlan": "Learn common expressions and basic grammar",
+      "name": "Seeker",
+      "icon": "seeker.png",
+      "studyPlan": "study-guide-for-seeker.pdf",
       "levelNumber": 2,
+      "prize": "Voucher R$100,00",
       "resources": [
         {
           "id": 2,
-          "name": "Elementary English Guide",
+          "name": "Book",
           "description": "Guide for elementary English learners",
           "link": "https://example.com/elementary-english"
         }
@@ -32,59 +37,38 @@
     },
     {
       "id": 3,
-      "name": "Intermediate",
-      "studyPlan": "Practice conversation and advanced grammar",
+      "name": "Ascendant",
+      "studyPlan": "Preply",
+      "icon": "ascendant.png",
       "levelNumber": 3,
-      "resources": [
-        {
-          "id": 3,
-          "name": "Intermediate English Practice",
-          "description": "Intermediate level exercises and materials",
-          "link": "https://example.com/intermediate-english"
-        }
-      ]
+      "prize": "Voucher R$150,00",
+      "resources": []
     },
     {
       "id": 4,
-      "name": "Upper Intermediate",
-      "studyPlan": "Focus on fluency and complex topics",
+      "name": "Crusader",
+      "studyPlan": "Preply",
+      "icon": "crusader.png",
       "levelNumber": 4,
-      "resources": [
-        {
-          "id": 4,
-          "name": "Advanced English Topics",
-          "description": "Upper intermediate English materials",
-          "link": "https://example.com/upper-intermediate"
-        }
-      ]
+      "prize": "Voucher R$250,00",
+      "resources": []
     },
     {
       "id": 5,
-      "name": "Advanced",
-      "studyPlan": "Master advanced concepts and idioms",
+      "name": "Legend",
+      "studyPlan": "Preply",
+      "icon": "legend.png",
       "levelNumber": 5,
-      "resources": [
-        {
-          "id": 5,
-          "name": "Advanced English Materials",
-          "description": "Advanced level English resources",
-          "link": "https://example.com/advanced-english"
-        }
-      ]
+      "prize": "Voucher R$350,00 or Alexa-Echo Dot, Echo pop",
+      "resources": []
     },
     {
       "id": 6,
-      "name": "Proficient",
-      "studyPlan": "Achieve native-like proficiency",
+      "name": "Immortal",
+      "studyPlan": "Preply",
+      "icon": "immortal.png",
       "levelNumber": 6,
-      "resources": [
-        {
-          "id": 6,
-          "name": "English Mastery",
-          "description": "Professional level English content",
-          "link": "https://example.com/proficient-english"
-        }
-      ]
+      "resources": []
     }
   ]
 }
