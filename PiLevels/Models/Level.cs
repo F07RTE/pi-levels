@@ -6,7 +6,7 @@ public class Level
     public required string Name { get; set; }
     public required string Description { get; set; }
     public required string Icon { get; set; }
-    public required List<Resource> Resources { get; set; } = new List<Resource>();
+    public required List<Resource> Resources { get; set; } = [];
     public required string StudyPlan { get; set; }
     public required int LevelNumber { get; set; }
 }
