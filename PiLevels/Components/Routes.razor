@@ -1,6 +1,27 @@
-﻿<Router AppAssembly="typeof(Program).Assembly">
+@using Microsoft.AspNetCore.Components.Routing
+@using MudBlazor
+
+<Router AppAssembly="@typeof(Program).Assembly">
     <Found Context="routeData">
-        <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(Layout.MainLayout)" />
         <FocusOnNavigate RouteData="routeData" Selector="h1" />
     </Found>
+    <NotFound>
+        <LayoutView Layout="@typeof(Layout.MainLayout)">
+            <MudContainer MaxWidth="MaxWidth.Medium" Class="mt-16">
+                <MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">Page Not Found</MudText>
+                <MudText Typo="Typo.body1" Align="Align.Center" Class="mb-8">
+                    The page you requested could not be found.
+                </MudText>
+                <MudStack AlignItems="AlignItems.Center">
+                    <MudButton Variant="Variant.Filled" 
+                              Color="Color.Primary"
+                              Href="/"
+                              StartIcon="@Icons.Material.Filled.Home">
+                        Return Home
+                    </MudButton>
+                </MudStack>
+            </MudContainer>
+        </LayoutView>
+    </NotFound>
 </Router>

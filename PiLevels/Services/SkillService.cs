@@ -15,6 +15,14 @@ public class SkillService
     {
         var filePath = Path.Combine(_environment.ContentRootPath, "Data", "english-skill.json");
         var jsonContent = await File.ReadAllTextAsync(filePath);
-        return JsonSerializer.Deserialize<Models.Skill>(jsonContent) ?? throw new Exception("Failed to load English skill data");
+        
+        var options = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true,
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+        };
+
+        return JsonSerializer.Deserialize<Models.Skill>(jsonContent, options) ?? 
+            throw new Exception("Failed to load English skill data");
     }
 }

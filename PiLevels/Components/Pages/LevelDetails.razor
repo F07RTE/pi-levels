@@ -1,0 +1,137 @@
+@page "/level/{LevelNumber:int}"
+@rendermode InteractiveServer
+@using PiLevels.Services.Skill
+@using MudBlazor
+@inject SkillService SkillService
+@inject NavigationManager Navigation
+
+<PageTitle>Level @LevelNumber Details</PageTitle>
+
+<MudContainer MaxWidth="MaxWidth.Medium" Class="mt-4">
+    @if (_level == null)
+    {
+        <MudProgressCircular Color="Color.Primary" Indeterminate="true" />
+    }
+    else
+    {
+        <MudPaper Elevation="0" Class="pa-4">
+            <MudStack AlignItems="AlignItems.Center" Class="mb-4">
+                <MudImage Src="@($"resources/{_level.Icon}")" 
+                         Alt="@_level.Name" 
+                         Width="128" 
+                         Height="128" 
+                         ObjectFit="ObjectFit.Cover" />
+                
+                <MudText Typo="Typo.h4" Align="Align.Center">@_level.Name</MudText>
+                
+                @if (!string.IsNullOrEmpty(_level.Description))
+                {
+                    <MudText Typo="Typo.body1" Class="mud-text-secondary">
+                        @_level.Description
+                    </MudText>
+                }
+            </MudStack>
+
+            <MudDivider Class="my-6" />
+
+            <MudGrid>
+                @if (!string.IsNullOrEmpty(_level.StudyPlan))
+                {
+                    <MudItem xs="12">
+                        <MudPaper Elevation="2" Class="pa-4">
+                            <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                <div>
+                                    <MudText Typo="Typo.h6">Study Plan</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">
+                                        Download the study guide for this level
+                                    </MudText>
+                                </div>
+                                <MudButton Variant="Variant.Filled" 
+                                         Color="Color.Primary" 
+                                         StartIcon="@Icons.Material.Filled.Download"
+                                         Href="@($"resources/{_level.StudyPlan}")" 
+                                         Target="_blank">
+                                    Download
+                                </MudButton>
+                            </MudStack>
+                        </MudPaper>
+                    </MudItem>
+                }
+
+                @if (!string.IsNullOrEmpty(_level.Prize))
+                {
+                    <MudItem xs="12">
+                        <MudPaper Elevation="2" Class="pa-4">
+                            <MudStack Row="true" AlignItems="AlignItems.Center">
+                                <MudIcon Icon="@Icons.Material.Filled.EmojiEvents" 
+                                        Color="Color.Warning" 
+                                        Size="Size.Large" 
+                                        Class="mr-3" />
+                                <div>
+                                    <MudText Typo="Typo.h6">Level Prize</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">
+                                        @_level.Prize
+                                    </MudText>
+                                </div>
+                            </MudStack>
+                        </MudPaper>
+                    </MudItem>
+                }
+
+                @if (_level.Resources.Any())
+                {
+                    <MudItem xs="12">
+                        <MudPaper Elevation="2" Class="pa-4">
+                            <MudText Typo="Typo.h6" Class="mb-4">Learning Resources</MudText>
+                            <MudList Clickable="true">
+                                @foreach (var resource in _level.Resources)
+                                {
+                                    <MudListItem Href="@resource.Link" Target="_blank">
+                                        <div class="d-flex flex-column">
+                                            <MudText>@resource.Name</MudText>
+                                            @if (!string.IsNullOrEmpty(resource.Description))
+                                            {
+                                                <MudText Typo="Typo.caption" Class="mud-text-secondary">
+                                                    @resource.Description
+                                                </MudText>
+                                            }
+                                        </div>
+                                    </MudListItem>
+                                }
+                            </MudList>
+                        </MudPaper>
+                    </MudItem>
+                }
+            </MudGrid>
+
+            <MudDivider Class="my-6" />
+
+            <MudStack AlignItems="AlignItems.Center">
+                <MudButton Variant="Variant.Text" 
+                          Color="Color.Primary" 
+                          StartIcon="@Icons.Material.Filled.ArrowBack"
+                          OnClick="NavigateBack">
+                    Back to Levels
+                </MudButton>
+            </MudStack>
+        </MudPaper>
+    }
+</MudContainer>
+
+@code {
+    [Parameter]
+    public int LevelNumber { get; set; }
+
+    private Models.Level? _level;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var skill = await SkillService.GetEnglishSkillAsync();
+        _level = skill.Levels.FirstOrDefault(l => l.LevelNumber == LevelNumber);
+    }
+
+    private void NavigateBack()
+    {
+        Navigation.NavigateTo("/");
+    }
+}
