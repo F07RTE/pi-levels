@@ -95,15 +95,39 @@
                             <MudList Clickable="true">
                                 @foreach (var resource in _level.Resources)
                                 {
-                                    <MudListItem Href="@resource.Link" Target="_blank">
-                                        <div class="d-flex flex-column">
-                                            <MudText>@resource.Name</MudText>
-                                            @if (!string.IsNullOrEmpty(resource.Description))
-                                            {
-                                                <MudText Typo="Typo.caption" Class="mud-text-secondary">
-                                                    @resource.Description
-                                                </MudText>
-                                            }
+                                    <MudListItem>
+                                        <div class="d-flex justify-space-between align-center">
+                                            <div class="d-flex flex-column">
+                                                <MudText>@resource.Name</MudText>
+                                                @if (!string.IsNullOrEmpty(resource.Description))
+                                                {
+                                                    <MudText Typo="Typo.caption" Class="mud-text-secondary">
+                                                        @resource.Description
+                                                    </MudText>
+                                                }
+                                            </div>
+                                            <div class="d-flex gap-2">
+                                                @if (!string.IsNullOrEmpty(resource.Link))
+                                                {
+                                                    <MudButton Variant="Variant.Text"
+                                                               Color="Color.Primary"
+                                                               StartIcon="@Icons.Material.Filled.Link"
+                                                               Href="@resource.Link"
+                                                               Target="_blank">
+                                                        Visit
+                                                    </MudButton>
+                                                }
+                                                @if (!string.IsNullOrEmpty(resource.FileName))
+                                                {
+                                                    <MudButton Variant="Variant.Text"
+                                                               Color="Color.Primary"
+                                                               StartIcon="@Icons.Material.Filled.Download"
+                                                               Href="@($"resources/{resource.FileName}")"
+                                                               Target="_blank">
+                                                        Download
+                                                    </MudButton>
+                                                }
+                                            </div>
                                         </div>
                                     </MudListItem>
                                 }
