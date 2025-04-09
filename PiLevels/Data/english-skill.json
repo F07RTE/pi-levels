@@ -16,9 +16,10 @@
       "resources": [
         {
           "id": 1,
-          "name": "Book",
-          "description": "Introduction to English language basics",
-          "link": "https://example.com/basic-english"
+          "name": "PI English Resources Doc",
+          "description": "Document that we created to suggest learning resources",
+          "link": null,
+          "fileName": "pi-english-resources.docx"
         }
       ]
     },
@@ -32,10 +33,11 @@
       "prize": "Voucher R$100,00",
       "resources": [
         {
-          "id": 2,
-          "name": "Book",
-          "description": "Guide for elementary English learners",
-          "link": "https://example.com/elementary-english"
+          "id": 1,
+          "name": "PI English Resources Doc",
+          "description": "Document that we created to suggest learning resources",
+          "link": null,
+          "fileName": "pi-english-resources.docx"
         }
       ]
     },
@@ -72,11 +74,11 @@
     {
       "id": 6,
       "name": "Immortal",
-      "studyPlan": "Preply",
+      "studyPlan": "",
       "icon": "immortal_badge.png",
       "levelNumber": 6,
       "description": "",
-      "prize": "Voucher R$500,00 or Alexa-Echo Dot, Echo pop",
+      "prize": "",
       "resources": []
     }
   ]
