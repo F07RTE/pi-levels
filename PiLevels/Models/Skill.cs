@@ -7,5 +7,4 @@ public class Skill
     public required string Icon { get; set; }
     public string? Description { get; set; }
     public List<Level> Levels { get; set; } = [];
-    public List<SubSkill> SubSkills { get; set; } = [];
 }
