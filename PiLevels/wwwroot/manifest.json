@@ -2,18 +2,18 @@
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
     "manifestVersion": "1.16",
     "version": "1.0.0",
-    "id": "11111111-2222-3333-4444-555555555555",
+    "id": "e66cfbc3-5cf5-4cee-b462-dcc4b70c4deb",
     "packageName": "com.pilevel.app",
     "name": {
         "short": "Pi Levels",
         "full": "Pi Levels App"
     },
     "developer": {
-        "name": "Your Organization",
+        "name": "Programmers",
         "mpnId": "",
-        "websiteUrl": "https://a4d4-2804-1b3-af81-5acb-dd51-bd94-5991-8cd1.ngrok-free.app",
-        "privacyUrl": "https://a4d4-2804-1b3-af81-5acb-dd51-bd94-5991-8cd1.ngrok-free.app/privacy",
-        "termsOfUseUrl": "https://a4d4-2804-1b3-af81-5acb-dd51-bd94-5991-8cd1.ngrok-free.app/terms"
+        "websiteUrl": "https://app-pi-leves-h9e7abaegzfrh8dv.eastus2-01.azurewebsites.net",
+        "privacyUrl": "https://app-pi-leves-h9e7abaegzfrh8dv.eastus2-01.azurewebsites.net/privacy",
+        "termsOfUseUrl": "https://app-pi-leves-h9e7abaegzfrh8dv.eastus2-01.azurewebsites.net/terms"
     },
     "description": {
         "short": "Pi Levels Teams App",
@@ -26,7 +26,7 @@
     "accentColor": "#FFFFFF",
     "configurableTabs": [
         {
-            "configurationUrl": "https://a4d4-2804-1b3-af81-5acb-dd51-bd94-5991-8cd1.ngrok-free.app/config",
+            "configurationUrl": "https://app-pi-leves-h9e7abaegzfrh8dv.eastus2-01.azurewebsites.net/config",
             "canUpdateConfiguration": true,
             "scopes": [
                 "team",
@@ -38,8 +38,8 @@
         {
             "entityId": "index",
             "name": "Pi Levels",
-            "contentUrl": "https://a4d4-2804-1b3-af81-5acb-dd51-bd94-5991-8cd1.ngrok-free.app/",
-            "websiteUrl": "https://a4d4-2804-1b3-af81-5acb-dd51-bd94-5991-8cd1.ngrok-free.app/",
+            "contentUrl": "https://app-pi-leves-h9e7abaegzfrh8dv.eastus2-01.azurewebsites.net/",
+            "websiteUrl": "https://app-pi-leves-h9e7abaegzfrh8dv.eastus2-01.azurewebsites.net/",
             "scopes": [
                 "personal"
             ]
