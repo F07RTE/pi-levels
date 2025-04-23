@@ -12,7 +12,7 @@
       "icon": "initiate_badge.png",
       "studyPlan":"study-guide-for-initiate.docx",
       "levelNumber": 1,
-      "prize": "Voucher R$50,00",
+      "prize": "Voucher ***",
       "resources": [
         {
           "id": 1,
@@ -30,7 +30,7 @@
       "description": "",
       "studyPlan": "study-guide-for-seeker.docx",
       "levelNumber": 2,
-      "prize": "Voucher R$100,00",
+      "prize": "Voucher ***",
       "resources": [
         {
           "id": 1,
@@ -48,7 +48,7 @@
       "icon": "ascendant_badge.png",
       "levelNumber": 3,
       "description": "",
-      "prize": "Voucher R$150,00",
+      "prize": "Voucher ***",
       "resources": []
     },
     {
@@ -58,7 +58,7 @@
       "icon": "crusader_badge.png",
       "levelNumber": 4,
       "description": "",
-      "prize": "Voucher R$250,00",
+      "prize": "Voucher ***",
       "resources": []
     },
     {
@@ -68,7 +68,7 @@
       "icon": "legend_badge.png",
       "levelNumber": 5,
       "description": "",
-      "prize": "Voucher R$350,00 or Alexa-Echo Dot, Echo pop",
+      "prize": "Voucher ***",
       "resources": []
     },
     {

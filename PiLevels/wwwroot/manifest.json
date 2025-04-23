@@ -1,7 +1,7 @@
 {
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
     "manifestVersion": "1.16",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "id": "e66cfbc3-5cf5-4cee-b462-dcc4b70c4deb",
     "packageName": "com.pilevel.app",
     "name": {
@@ -50,6 +50,6 @@
         "messageTeamMembers"
     ],
     "validDomains": [
-        "localhost"
+        "app-pi-leves-h9e7abaegzfrh8dv.eastus2-01.azurewebsites.net"
     ]
 }
