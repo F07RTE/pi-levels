@@ -4,7 +4,7 @@
 @inject IJSRuntime JSRuntime
 @inject NavigationManager NavigationManager
 
-<MudThemeProvider  Theme="ThemeService.GetTheme()"/>
+<MudThemeProvider Theme="ThemeService.GetTheme()" />
 <MudDialogProvider />
 <MudSnackbarProvider />
 
@@ -15,8 +15,11 @@
 </HeadContent>
 
 <MudLayout>
-    <MudAppBar Elevation="2"Color="Color.Primary">
-        <MudImage Src="resources/logo.png" Width="100" Style="cursor: pointer" @onclick="NavigateToHome"></MudImage>
+    <MudAppBar Elevation="2" Color="Color.Primary">
+        <MudLink Href="/">
+            <MudImage Src="resources/logo.png" Width="100" Style="cursor: pointer" @onclick="NavigateToHome">
+            </MudImage>
+        </MudLink>
     </MudAppBar>
     <MudMainContent>
         <MudContainer MaxWidth="MaxWidth.Large" Class="my-4">
