@@ -9,6 +9,7 @@ public class Level
     public List<SubSkill> SubSkills { get; set; } = [];
     public required List<Resource> Resources { get; set; } = [];
     public string? StudyPlan { get; set; }
+    public bool ExternalPlatform { get; set; }
     public string? Prize { get; set; }
     public required int LevelNumber { get; set; }
 }

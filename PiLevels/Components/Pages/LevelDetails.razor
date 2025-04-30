@@ -16,14 +16,11 @@
     {
         <MudPaper Elevation="0" Class="pa-4">
             <MudStack AlignItems="AlignItems.Center" Class="mb-4">
-                <MudImage Src="@($"resources/{_level.Icon}")" 
-                         Alt="@_level.Name" 
-                         Width="128" 
-                         Height="128" 
-                         ObjectFit="ObjectFit.Cover" />
-                
+                <MudImage Src="@($"resources/{_level.Icon}")" Alt="@_level.Name" Width="128" Height="128"
+                    ObjectFit="ObjectFit.Cover" />
+
                 <MudText Typo="Typo.h4" Align="Align.Center">@_level.Name</MudText>
-                
+
                 @if (!string.IsNullOrEmpty(_level.Description))
                 {
                     <MudText Typo="Typo.body1" Class="mud-text-secondary">
@@ -35,34 +32,36 @@
             <MudDivider Class="my-6" />
 
             <MudGrid>
+
+                @if (_level.ExternalPlatform)
+                {
+                    <MudItem xs="12">
+                        <MudPaper Elevation="2" Class="pa-4">
+                            <MudStack AlignItems="AlignItems.Center">
+                                <MudLink Typo="Typo.h5" Align="Align.Center" Color="Color.Tertiary" Underline="Underline.Always"
+                                    Href="https://preply.com/">Preply</MudLink>
+                            </MudStack>
+                        </MudPaper>
+                    </MudItem>
+                }
+
                 @if (!string.IsNullOrEmpty(_level.StudyPlan))
                 {
                     <MudItem xs="12">
                         <MudPaper Elevation="2" Class="pa-4">
-                            @if (_level.StudyPlan.Equals("Preply", StringComparison.OrdinalIgnoreCase))
-                            {
-                                <MudStack AlignItems="AlignItems.Center">
-                                    <MudLink Typo="Typo.h5" Align="Align.Center" Color="Color.Tertiary" Underline="Underline.Always" Href="https://preply.com/">Preply</MudLink>
-                                </MudStack>
-                            }
-                            else
-                            {
-                                <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
-                                    <div>
-                                        <MudText Typo="Typo.h6">Study Plan</MudText>
-                                        <MudText Typo="Typo.body2" Class="mud-text-secondary">
-                                            Download the study guide for this level
-                                        </MudText>
-                                    </div>
-                                    <MudButton Variant="Variant.Filled" 
-                                             Color="Color.Primary" 
-                                             StartIcon="@Icons.Material.Filled.Download"
-                                             Href="@($"resources/{_level.StudyPlan}")" 
-                                             Target="_blank">
-                                        Download
-                                    </MudButton>
-                                </MudStack>
-                            }
+                            <MudStack Row="true" AlignItems="AlignItems.Center" Justify="Justify.SpaceBetween">
+                                <div>
+                                    <MudText Typo="Typo.h6">Study Plan</MudText>
+                                    <MudText Typo="Typo.body2" Class="mud-text-secondary">
+                                        Download the study guide for this level
+                                    </MudText>
+                                </div>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary"
+                                    StartIcon="@Icons.Material.Filled.Download" Href="@($"resources/{_level.StudyPlan}")"
+                                    Target="_blank">
+                                    Download
+                                </MudButton>
+                            </MudStack>
                         </MudPaper>
                     </MudItem>
                 }
@@ -72,10 +71,8 @@
                     <MudItem xs="12">
                         <MudPaper Elevation="2" Class="pa-4">
                             <MudStack Row="true" AlignItems="AlignItems.Center">
-                                <MudIcon Icon="@Icons.Material.Filled.EmojiEvents" 
-                                        Color="Color.Warning" 
-                                        Size="Size.Large" 
-                                        Class="mr-3" />
+                                <MudIcon Icon="@Icons.Material.Filled.EmojiEvents" Color="Color.Warning" Size="Size.Large"
+                                    Class="mr-3" />
                                 <div>
                                     <MudText Typo="Typo.h6">Level Prize</MudText>
                                     <MudText Typo="Typo.body2" Class="mud-text-secondary">
@@ -109,21 +106,16 @@
                                             <div class="d-flex gap-2">
                                                 @if (!string.IsNullOrEmpty(resource.Link))
                                                 {
-                                                    <MudButton Variant="Variant.Text"
-                                                               Color="Color.Primary"
-                                                               StartIcon="@Icons.Material.Filled.Link"
-                                                               Href="@resource.Link"
-                                                               Target="_blank">
+                                                    <MudButton Variant="Variant.Text" Color="Color.Primary"
+                                                        StartIcon="@Icons.Material.Filled.Link" Href="@resource.Link" Target="_blank">
                                                         Visit
                                                     </MudButton>
                                                 }
                                                 @if (!string.IsNullOrEmpty(resource.FileName))
                                                 {
-                                                    <MudButton Variant="Variant.Text"
-                                                               Color="Color.Primary"
-                                                               StartIcon="@Icons.Material.Filled.Download"
-                                                               Href="@($"resources/{resource.FileName}")"
-                                                               Target="_blank">
+                                                    <MudButton Variant="Variant.Text" Color="Color.Primary"
+                                                        StartIcon="@Icons.Material.Filled.Download"
+                                                        Href="@($"resources/{resource.FileName}")" Target="_blank">
                                                         Download
                                                     </MudButton>
                                                 }
@@ -140,18 +132,16 @@
             <MudDivider Class="my-6" />
 
             <MudStack AlignItems="AlignItems.Center">
-                <MudButton Variant="Variant.Text" 
-                          Color="Color.Primary" 
-                          StartIcon="@Icons.Material.Filled.ArrowBack"
-                          OnClick="NavigateBack">
+                <MudButton Variant="Variant.Text" Color="Color.Primary" StartIcon="@Icons.Material.Filled.ArrowBack"
+                    OnClick="NavigateBack">
                     Back to Levels
                 </MudButton>
             </MudStack>
         </MudPaper>
     }
-</MudContainer>
+    </MudContainer>
 
-@code {
+    @code {
     [Parameter]
     public int LevelNumber { get; set; }
 

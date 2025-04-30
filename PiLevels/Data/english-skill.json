@@ -12,6 +12,7 @@
       "icon": "initiate_badge.png",
       "studyPlan":"study-guide-for-initiate.docx",
       "levelNumber": 1,
+      "externalPlatform": false,
       "prize": "Voucher R$50,00",
       "resources": [
         {
@@ -30,6 +31,7 @@
       "description": "",
       "studyPlan": "study-guide-for-seeker.docx",
       "levelNumber": 2,
+      "externalPlatform": false,
       "prize": "Voucher R$100,00",
       "resources": [
         {
@@ -44,40 +46,41 @@
     {
       "id": 3,
       "name": "Ascendant",
-      "studyPlan": "Preply",
+      "studyPlan": "study-guide-for-ascendant.docx",
       "icon": "ascendant_badge.png",
       "levelNumber": 3,
       "description": "",
+      "externalPlatform": true,
       "prize": "Voucher R$150,00",
       "resources": []
     },
     {
       "id": 4,
       "name": "Crusader",
-      "studyPlan": "Preply",
       "icon": "crusader_badge.png",
       "levelNumber": 4,
       "description": "",
+      "externalPlatform": true,
       "prize": "Voucher R$200,00",
       "resources": []
     },
     {
       "id": 5,
       "name": "Legend",
-      "studyPlan": "Preply",
       "icon": "legend_badge.png",
       "levelNumber": 5,
       "description": "",
+      "externalPlatform": true,
       "prize": "Voucher R$250,00",
       "resources": []
     },
     {
       "id": 6,
       "name": "Immortal",
-      "studyPlan": "",
       "icon": "immortal_badge.png",
       "levelNumber": 6,
       "description": "",
+      "externalPlatform": false,
       "prize": "",
       "resources": []
     }
