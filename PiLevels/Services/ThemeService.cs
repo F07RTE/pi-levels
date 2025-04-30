@@ -14,6 +14,7 @@ public class ThemeService
                 White = "#FFFFFF",
                 Primary = "#0072CE", // Bright blue from logo
                 Secondary = "#4CAF50", // Green from JORNADA DIGITAL
+                Tertiary = "#FF7AAC", // Preply
                 Background = "#FFFFFF",
                 Surface = "#FFFFFF",
                 TextPrimary = "#1E1E1E",
